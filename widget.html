@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget</title>
+    <script src="https://widget.educhain.cloud/widget.js"></script>
+    <link href="https://widget.educhain.cloud/widget.css" rel="stylesheet"/>
+    <style>
+        /* Стиль для отладки */
+        body {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        console.log('Начало инициализации виджета...');
+        document.addEventListener('DOMContentLoaded', (event) => {
+            console.log('DOM загружен, инициализация виджета.');
+            try {
+                window.EduWidget.floating({
+                    initialQuery: "",
+                    iframe: false,
+                    position: {
+                        right: "20px",
+                        bottom: "20px",
+                    },
+                    language: "en"
+                });
+                console.log('Виджет инициализирован.');
+            } catch (error) {
+                console.error('Ошибка инициализации виджета:', error);
+            }
+        });
+    </script>
+</body>
+</html>
