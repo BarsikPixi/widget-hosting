@@ -17,8 +17,6 @@
             align-items: center;
         }
         #edu-widget {
-            width: 100%;
-            max-width: 600px;
             display: flex;
             justify-content: center; /* Расположение значка виджета по центру */
         }
@@ -33,41 +31,31 @@
             padding: 10px; /* Отступы внутри плашки */
             border-radius: 10px; /* Скругленные углы плашки */
             display: inline-block; /* Для ограничения ширины */
-            margin-top: 20px; /* Расстояние перед строкой "3D-Академии Ксении Копниной" */
+            margin-top: 20px; /* Расстояние перед "3D-Академии Ксении Копниной" */
         }
         p {
             font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat */
             font-size: 23px; /* Размер шрифта текста */
-            color: #000000; /* Цвет текста */
-            font-weight: 400; /* Не жирный шрифт */
-            margin-top: 20px; /* Расстояние перед текстом */
+            color: #000000; /* Черный цвет текста */
+            font-weight: normal; /* Нормальный шрифт */
+            margin-top: 20px; /* Расстояние перед строкой текста */
         }
         footer {
-            background-color: #f8f9fa; /* Светлый фон подвала */
-            padding: 10px 0; /* Отступы внутри подвала */
             position: absolute;
-            width: 100%;
             bottom: 0;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
+            width: 100%;
             text-align: center;
-            color: #000000; /* Черный цвет текста */
-        }
-        .logo {
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 20px; /* Отступ снизу для логотипа */
-            max-width: 150px; /* Максимальная ширина логотипа */
+            font-size: 14px;
+            padding: 10px 0;
+            background-color: #ffffff;
         }
     </style>
 </head>
 <body>
     <div class="container text-center mt-5">
-        <img src="Logo KK прямоугольник.png" alt="Логотип Ксении Копниной" class="logo">
-        <h1>Добро пожаловать на страницу проверки подлинности</h1>
-        <h1>NFT-Сертификатов</h1>
+        <h1>Добро пожаловать на страницу проверки подлинности<br>NFT-Сертификатов</h1>
         <h1 class="highlight">3D-Академии Ксении Копниной</h1>
-        <p>Кликните на синий значок, и в открывшемся поле введите имя обладателя сертификата, или номер сертификата.</p>
+        <p>Кликните на синий значок, в открывшемся поле введите имя обладателя сертификата или номер сертификата.</p>
     </div>
     <div id="widget-container" class="container text-center">
         <div id="edu-widget"></div>
@@ -83,9 +71,9 @@
                 initialQuery: "",
                 iframe: true,
                 position: {
-                    right: "50%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
                     bottom: "auto",
-                    transform: "translateX(50%)"
                 },
                 language: "en",
                 container: "#edu-widget"
