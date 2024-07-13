@@ -11,7 +11,6 @@
             background-color: #d1fff7; /* Фон страницы */
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
@@ -39,10 +38,9 @@
             text-align: center; /* Центрирование текста */
         }
         #widget-container {
+            margin-top: 20px; /* Небольшой отступ перед виджетом */
             display: flex;
             justify-content: center; /* Центрирование виджета */
-            align-items: center;
-            margin-top: 50px; /* Увеличенное расстояние перед виджетом */
             width: 100%;
         }
         footer {
@@ -51,6 +49,8 @@
             padding: 10px 0;
             background-color: #ffffff;
             width: 100%;
+            position: absolute;
+            bottom: 0;
         }
     </style>
 </head>
@@ -75,8 +75,8 @@
                 iframe: true,
                 position: {
                     left: "50%",
-                    top: "50%",
-                    transform: "translate(-50%, -50%)"
+                    top: "0",
+                    transform: "translateX(-50%)"
                 },
                 language: "en",
                 container: "#edu-widget"
