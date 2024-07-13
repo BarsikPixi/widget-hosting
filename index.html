@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Widget Hosting Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
+        body {
+            background-color: #d1fff7; /* Фон страницы */
+        }
         #widget-container {
             margin-top: 30px;
             display: flex;
@@ -16,12 +20,28 @@
             width: 100%;
             max-width: 600px;
         }
+        h1 {
+            font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat */
+            font-size: 42px; /* Размер шрифта заголовка */
+            color: #12b4b9; /* Цвет текста заголовка */
+            font-weight: bold; /* Жирный шрифт */
+            background-color: #ffffff; /* Белый цвет фона плашки */
+            padding: 10px; /* Отступы внутри плашки */
+            border-radius: 5px; /* Скругленные углы плашки */
+            display: inline-block; /* Для ограничения ширины */
+        }
+        p {
+            font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat */
+            font-size: 23px; /* Размер шрифта текста */
+            color: #000000; /* Цвет текста */
+            font-weight: bold; /* Жирный шрифт */
+        }
     </style>
 </head>
 <body>
     <div class="container text-center mt-5">
-        <h1>Добро пожаловать на странцу проверки подлинности NFT-Сертификатов 3D-Академии Ксении Копниной</h1>
-        <p>Пожалуйста, кликните на сини значок и в открывшемся поле введите имя обладателя сертификата, или номер сертификата.</p>
+        <h1>Добро пожаловать на страницу проверки подлинности NFT-Сертификатов 3D-Академии Ксении Копниной</h1>
+        <p>Пожалуйста, кликните на синий значок и в открывшемся поле введите имя обладателя сертификата, или номер сертификата.</p>
     </div>
     <div id="widget-container" class="container text-center">
         <div id="edu-widget"></div>
