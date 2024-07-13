@@ -9,17 +9,19 @@
     <style>
         body {
             background-color: #d1fff7; /* Фон страницы */
-        }
-        #widget-container {
-            margin-top: 50px; /* Увеличенное расстояние перед виджетом */
             display: flex;
-            justify-content: center; /* Центрирование виджета */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
         }
         h1 {
             font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat */
             font-size: 32px; /* Размер шрифта заголовка */
             color: #000000; /* Черный цвет текста заголовка */
             font-weight: 500; /* Средняя жирность шрифта */
+            text-align: center; /* Центрирование текста */
         }
         .highlight {
             background-color: #ffffff; /* Белый цвет фона плашки */
@@ -34,15 +36,21 @@
             color: #000000; /* Черный цвет текста */
             font-weight: normal; /* Нормальный шрифт */
             margin-top: 20px; /* Расстояние перед строкой текста */
+            text-align: center; /* Центрирование текста */
+        }
+        #widget-container {
+            display: flex;
+            justify-content: center; /* Центрирование виджета */
+            align-items: center;
+            margin-top: 50px; /* Увеличенное расстояние перед виджетом */
+            width: 100%;
         }
         footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
             text-align: center;
             font-size: 14px;
             padding: 10px 0;
             background-color: #ffffff;
+            width: 100%;
         }
     </style>
 </head>
@@ -50,7 +58,7 @@
     <div class="container text-center mt-5">
         <h1>Добро пожаловать на страницу проверки подлинности<br>NFT-Сертификатов</h1>
         <h1 class="highlight">3D-Академии Ксении Копниной</h1>
-        <p>Кликните на синий значок, и в открывшемся поле введите имя обладателя сертификата, или номер сертификата.</p>
+        <p>Кликните на синий значок, в открывшемся поле введите имя обладателя сертификата или номер сертификата.</p>
     </div>
     <div id="widget-container" class="container">
         <div id="edu-widget"></div>
@@ -66,9 +74,9 @@
                 initialQuery: "",
                 iframe: true,
                 position: {
-                    right: "50%",
-                    bottom: "auto",
-                    transform: "translateX(50%)"
+                    left: "50%",
+                    top: "50%",
+                    transform: "translate(-50%, -50%)"
                 },
                 language: "en",
                 container: "#edu-widget"
