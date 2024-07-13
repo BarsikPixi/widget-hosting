@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Widget</title>
-    <script src="https://widget.educhain.cloud/widget.js"></script>
-    <link href="https://widget.educhain.cloud/widget.css" rel="stylesheet"/>
-    <style>
-        /* Стиль для отладки */
-        body {
-            background-color: lightgrey;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widget Hosting</title>
+  <link href="https://widget.educhain.cloud/widget.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .widget-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
 </head>
 <body>
-    <script>
-        console.log('Начало инициализации виджета...');
-        document.addEventListener('DOMContentLoaded', (event) => {
-            console.log('DOM загружен, инициализация виджета.');
-            try {
-                window.EduWidget.floating({
-                    initialQuery: "",
-                    iframe: false,
-                    position: {
-                        right: "20px",
-                        bottom: "20px",
-                    },
-                    language: "en"
-                });
-                console.log('Виджет инициализирован.');
-            } catch (error) {
-                console.error('Ошибка инициализации виджета:', error);
-            }
-        });
-    </script>
-</body>
-</html>
+  <div class="container">
+    <h1>Welcome to the Widget Hosting Page</h1>
+    <p>Here you can find your certificate information by using the widget below.</p>
+    <div class="widget-container" id="edc-widget"></div>
+  </div>
+  <script src="https://widget.educhain.cloud/widget.js"></script>
+  <script>
+    console.log('Начало инициализации виджета...');
+    document.addEventListener('DOMContentLoaded', (event) => {
+      console.log('DOM загружен, инициализация виджета.');
+      try {
+        window.EduWidget.floating({
+          initialQuery: "",
+          iframe: false,
+          position: {
+            right: "20px",
+            bottom: "20px",
+         
