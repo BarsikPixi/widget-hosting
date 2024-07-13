@@ -9,6 +9,7 @@
     <style>
         body {
             background-color: #d1fff7; /* Фон страницы */
+            position: relative; /* Для позиционирования плашки */
         }
         #widget-container {
             margin-top: 30px;
@@ -40,6 +41,19 @@
             color: #000000; /* Цвет текста */
             font-weight: bold; /* Жирный шрифт */
         }
+        .bottom-right-box {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 300px; /* Ширина плашки */
+            height: 200px; /* Высота плашки */
+            background-color: #ffffff; /* Белый цвет фона */
+            border-radius: 10px; /* Скругленные углы плашки */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -50,6 +64,10 @@
     </div>
     <div id="widget-container" class="container text-center">
         <div id="edu-widget"></div>
+    </div>
+    <div class="bottom-right-box">
+        <!-- Здесь можно добавить любой контент для белой плашки -->
+        <p>Контент плашки</p>
     </div>
     <script src="https://widget.educhain.cloud/widget.js"></script>
     <link href="https://widget.educhain.cloud/widget.css" rel="stylesheet"/>
