@@ -9,6 +9,9 @@
     <style>
         body {
             background-color: #d1fff7; /* Фон страницы */
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
         }
         #widget-container {
             margin-top: 30px;
@@ -40,15 +43,12 @@
         }
         .bottom-right-box {
             position: fixed;
-            bottom: 10px;
-            right: 10px;
+            bottom: -150px;
+            right: -150px;
             background-color: #ffffff;
             border-radius: 50%;
             width: 300px;
             height: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
@@ -63,7 +63,7 @@
         <div id="edu-widget"></div>
     </div>
     <div class="bottom-right-box">
-        <p></p>
+        <p>Контент плашки</p>
     </div>
     <script src="https://widget.educhain.cloud/widget.js"></script>
     <link href="https://widget.educhain.cloud/widget.css" rel="stylesheet"/>
