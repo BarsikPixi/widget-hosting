@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Widget Hosting Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #widget-container {
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
     <div class="container text-center mt-5">
         <h1>Welcome to the Widget Hosting Page</h1>
         <p>Here you can find your certificate information by using the widget below.</p>
+    </div>
+    <div id="widget-container" class="container text-center">
+        <div id="edu-widget"></div>
     </div>
     <script src="https://widget.educhain.cloud/widget.js"></script>
     <link href="https://widget.educhain.cloud/widget.css" rel="stylesheet"/>
@@ -17,12 +25,14 @@
         document.addEventListener('DOMContentLoaded', (event) => {
             window.EduWidget.floating({
                 initialQuery: "",
-                iframe: false,
+                iframe: true,
                 position: {
-                    right: "20px",
-                    bottom: "20px"
+                    right: "50%",
+                    bottom: "auto",
+                    transform: "translateX(50%)"
                 },
-                language: "en"
+                language: "en",
+                container: "#edu-widget"
             });
         });
     </script>
